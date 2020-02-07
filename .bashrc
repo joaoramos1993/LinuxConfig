@@ -120,13 +120,11 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     source $HOME/.bash-git-prompt/gitprompt.sh
 fi
 
-#bazel
-export PATH="$PATH:$HOME/joaopaulo/bin"
-source /home/joaopaulo/.bazel/bin/bazel-complete.bash
+#Commit difference between two branches: DiffBtBranches Branch1 Branch2
+DiffBtBranches(){
+    git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative $1..$2
+}
 
-#bazel build
-alias buildbazel='bazel build -c opt --config=sil --define sil=true //application/cvaas/xpad_sil_image/packaging/sil/adcamhigh:sil_ubuntu_image'
-alias buildmanage_network='bazel run //platform/aas/tools/deployment:manage_network'
 
 
 #VIM
