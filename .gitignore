@@ -13,3 +13,5 @@
 .gnupg/
 .bash_history
 
+# Visual Code
+.vs
