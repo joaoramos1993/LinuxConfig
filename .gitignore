@@ -3,3 +3,15 @@
 *.*~
 *~
 .*~
+
+# Vagrant Deploy
+.vagrant/
+*cloudimg-console.log
+
+# Vagrant Ubuntu OS
+.cache/
+.gnupg/
+.bash_history
+
+# Visual Code
+.vs
